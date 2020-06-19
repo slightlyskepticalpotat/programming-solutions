@@ -1,0 +1,7 @@
+list1 = list(map(int, input().split()))
+list2 = list(map(int, input().split()))
+list1.sort()
+list2.sort()
+list1.pop(0)
+list2.pop(0)
+print(max(sum(list1), sum(list2)))
