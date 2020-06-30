@@ -1,8 +1,5 @@
-size = int(input())
-i = 1
-while True:
-    print(i, end= ' ')
-    if i == size:
-        break
-    else:
-        i+=1
+import sys
+input = sys.stdin.readline
+
+for i in range(1, int(input())+1):
+    print(i, end=" ")
