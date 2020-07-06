@@ -1,0 +1,1 @@
+import sys; cs452, phil145 = int(input()), int(input()); sys.exit() if cs452 == phil145 else (print("CS452") if cs452 > phil145 else print("PHIL145"))
