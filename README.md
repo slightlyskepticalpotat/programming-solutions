@@ -1,2 +1,4 @@
 # programming-solutions
-My personal competitive programming solutions, including DMOJ and CCC. This repository can hopefully help others as well as record my learning.
+My personal competitive programming code including DMOJ and CCC. 
+
+Hopefully this helps others.
