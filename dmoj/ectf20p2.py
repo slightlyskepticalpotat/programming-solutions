@@ -1,0 +1,1 @@
+print("ctf{insp3ct_3lement_is_aw3some_fb5a9}")

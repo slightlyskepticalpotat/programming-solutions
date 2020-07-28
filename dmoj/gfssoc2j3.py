@@ -1,0 +1,1 @@
+print(eval(input().replace("P", "+").replace("M", "-")[:-1]))
