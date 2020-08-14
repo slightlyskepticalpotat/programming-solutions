@@ -1,6 +1,5 @@
 # https://en.wikipedia.org/wiki/Gauss_circle_problem
-import math, sys
-input = sys.stdin.readline
+import math
 
 while True:
     radius = int(input())
