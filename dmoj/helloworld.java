@@ -1,5 +1,8 @@
-public class LearnJava {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
+public class HelloWorld {
+    public static void main(String args[]){
+		boolean x = true;
+		if (x == true) {
+			System.out.println("Hello, World!");
+		}
     }
 }
