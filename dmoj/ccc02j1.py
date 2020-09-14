@@ -1,20 +1,20 @@
 def bar():
-    print(" * * *")
+    print(" * * *\n", end = "")
 def leftbar():
-    print("*")
-    print("*")
-    print("*")
+    print("*\n", end = "")
+    print("*\n", end = "")
+    print("*\n", end = "")
 def rightbar():
-    print("      *")
-    print("      *")
-    print("      *")
+    print("      *\n", end = "")
+    print("      *\n", end = "")
+    print("      *\n", end = "")
 def bothbar():
-    print("*     *")
-    print("*     *")
-    print("*     *")
+    print("*     *\n", end = "")
+    print("*     *\n", end = "")
+    print("*     *\n", end = "")
 def space():
-    print("")
-    
+    print("\n", end = "")
+
 number = int(input())
 if number == 0:
     bar()
@@ -23,9 +23,11 @@ if number == 0:
     bothbar()
     bar()
 elif number == 1:
+    space()
     rightbar()
     space()
     rightbar()
+    space()
 elif number == 2:
     bar()
     rightbar()
@@ -39,9 +41,11 @@ elif number == 3:
     rightbar()
     bar()
 elif number == 4:
+    space()
     bothbar()
     bar()
     rightbar()
+    space()
 elif number == 5:
     bar()
     leftbar()
@@ -57,7 +61,9 @@ elif number == 6:
 elif number == 7:
     bar()
     rightbar()
+    space()
     rightbar()
+    space()
 elif number == 8:
     bar()
     bothbar()

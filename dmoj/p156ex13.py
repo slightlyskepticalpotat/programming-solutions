@@ -4,7 +4,7 @@ def is_prime(n):
     iterations = 4
     if n < 2:
         return False
-    if n in [2, 3]:
+    if n in [2,3]:
         return True
     s, d = 0, n-1
     while pow(d, 1, 2) == 0:
@@ -23,8 +23,16 @@ def is_prime(n):
             return False
     return True
 
-for i in range(1, int(input()) + 1):
+m, primes, i, total = int(input()), [], 0, 0
+while True:
     if is_prime(i):
-        print(1)
-    else:
-        print(0)
+        total += 1
+        primes.append(i)
+    if len(primes) == 10:
+        print(*primes)
+        primes = []
+    i += 1
+    if total == m:
+        break
+if primes: # any left over?
+    print(*primes)
