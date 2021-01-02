@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
-ree = []
+
+ree = set()
 for i in range(int(input())):
-    ree.append(int(input()))
-print(len(set(ree)))
+    ree.add(int(input()))
+print(len(ree))
