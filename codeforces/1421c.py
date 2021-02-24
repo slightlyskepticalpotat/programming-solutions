@@ -1,0 +1,5 @@
+s = input().strip()
+print(3)
+print(f"R {len(s) - 1}")
+print(f"L {len(s)}")
+print(f"L {2}")
