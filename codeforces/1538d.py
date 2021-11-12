@@ -1,32 +1,14 @@
-import math, sys
+import sys
 
 input = sys.stdin.readline
 
-def num_factors(x):
-    n = 0
-    while not x % 2:
-        x //= 2
-        n += 1
-    i = 3
-    while x != 1 and i < 31622:
-        if x % i == 0:
-            n += 1
-            x /= i
-        else:
-            i += 2
-    if x != 1:
-        n += 1
-    return n
-
-for _ in range(int(input())):
-    a, b, k = map(int, input().split())
-    most, least, limit = num_factors(a) + num_factors(b), 2, -1
-    if a == b:
-        least = 0
-        limit = 1
-    elif 0 in [a % b, b % a]:
-        least = 1
-    if least <= k <= most and k != limit:
-        print("YES")
-    else:
-        print("NO")
+n, x = map(int, input().split())
+d, curr_d, i, j, ans, loc = [int(i) for i in input().split()] * 2, 0, 0, 0, 0, 0
+while i < n: # start at
+    while curr_d < x:
+        loc += (d[j] * (d[j] + 1)) // 2
+        curr_d, j = curr_d + d[j], j + 1
+    ans = max(ans, loc - ((curr_d - x) * (curr_d - x + 1)) // 2) # subtract start
+    loc -= (d[i] * (d[i] + 1)) // 2
+    curr_d, i = curr_d - d[i], i + 1
+print(ans)
