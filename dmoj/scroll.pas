@@ -1,1 +1,3 @@
-begin writeln; end.
+begin
+    writeln;
+end.

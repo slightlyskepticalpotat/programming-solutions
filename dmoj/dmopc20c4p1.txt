@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int cases;
+    long long n, s, e, r, p, a, h, l;
+    scanf("%d", &cases);
+    for (int i = 0; i < cases; i++) {
+        scanf("%lld %lld", &n, &s);
+        e = (n * (n + 1)) / 2;
+        r = e - s;
+        a = 0;
+        if (r > (n + n - 1)) {
+            a = 0;
+        } else if (r < 3) {
+            a = 0;
+        } else if (r <= n) {
+            if (r % 2) {
+                a = r / 2;
+            } else {
+                a = (r - 1) / 2;
+            }
+        } else {
+            h = (r - 1) / 2;
+            l = r - n;
+            a = h - l + 1;
+        }
+        printf("%lld\n", max(a, (long long) 0));
+    }
+}
